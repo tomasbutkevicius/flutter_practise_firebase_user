@@ -6,7 +6,7 @@ ThemeData appTheme() {
   return ThemeData(
     primaryColor: ThemeColors.green,
     colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ThemeColors.blue),
-    hintColor: ThemeColors.black,
+    hintColor: ThemeColors.darkGrey,
     dividerColor: ThemeColors.white,
     scaffoldBackgroundColor: ThemeColors.white,
     canvasColor: ThemeColors.white,

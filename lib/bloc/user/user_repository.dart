@@ -9,11 +9,11 @@ class UserRepository {
       const Duration(seconds: 2),
       () => UserModel(
         email: formModel.form.value[FormLoginModel.fieldNameEmail] as String,
-        username: 'username',
+        username: 'Username',
         completedProjects: 0,
         phone: 'phone',
-        city: 'city',
-        id: 'id',
+        city: 'New York',
+        id: '112061',
       ),
     );
   }

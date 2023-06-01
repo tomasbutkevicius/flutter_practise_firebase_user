@@ -1,7 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
 
 enum ProxyFontSize { smallest, extraSmall, small, medium, large, extraLarge, huge, extraHuge }
+
+enum ProxyFontColor { dark, light, white, error }
 
 enum ProxyFontWeight { regular, semiBold, bold, extraBold }
 
@@ -27,10 +30,19 @@ class ProxyConstants {
     ProxyFontWeight.regular: FontWeight.w400,
     ProxyFontWeight.semiBold: FontWeight.w500,
     ProxyFontWeight.bold: FontWeight.w600,
-    ProxyFontWeight.extraBold: FontWeight.w700,
+    ProxyFontWeight.extraBold: FontWeight.w900,
   };
 
   static FontWeight getFontWeight(ProxyFontWeight value) => fontWeightVariants[value]!;
+
+  static const Map<ProxyFontColor, Color> fontColorVariants = {
+    ProxyFontColor.dark: ThemeColors.darkGrey,
+    ProxyFontColor.light: ThemeColors.grey,
+    ProxyFontColor.white: ThemeColors.white,
+    ProxyFontColor.error: ThemeColors.red,
+  };
+
+  static Color getFontColor(ProxyFontColor value) => fontColorVariants[value]!;
 
   static const Map<ProxySpacing, double> spacingVariants = {
     ProxySpacing.extraSmall: 5.0,

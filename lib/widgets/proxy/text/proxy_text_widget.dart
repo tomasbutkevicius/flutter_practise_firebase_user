@@ -5,6 +5,7 @@ import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
 class ProxyTextWidget extends StatelessWidget {
   final String text;
   final Color color;
+  final ProxyFontColor? fontColorType;
   final int? maxLines;
   final bool isOverflow;
   final bool isUnderline;
@@ -17,7 +18,8 @@ class ProxyTextWidget extends StatelessWidget {
   const ProxyTextWidget({
     Key? key,
     required this.text,
-    this.color = ThemeColors.black,
+    this.color = ThemeColors.darkGrey,
+    this.fontColorType,
     this.maxLines,
     this.isOverflow = false,
     this.isUnderline = false,
@@ -37,10 +39,14 @@ class ProxyTextWidget extends StatelessWidget {
       overflow: isOverflow ? TextOverflow.ellipsis : TextOverflow.visible,
       style: TextStyle(
         height: 1.1,
-        color: color,
+        color: fontColorType == null ? color : ProxyConstants.getFontColor(fontColorType!),
         fontSize: ProxyConstants.getFontSize(fontSize),
         fontWeight: ProxyConstants.getFontWeight(fontWeight),
-        decoration: isLineThrough ? TextDecoration.lineThrough : isUnderline ? TextDecoration.underline : null,
+        decoration: isLineThrough
+            ? TextDecoration.lineThrough
+            : isUnderline
+                ? TextDecoration.underline
+                : null,
       ),
     );
   }

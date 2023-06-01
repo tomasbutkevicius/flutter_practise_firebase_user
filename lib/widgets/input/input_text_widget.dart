@@ -43,11 +43,11 @@ class InputTextWidget extends StatelessWidget {
     this.denyEmoji = true,
     this.keyboardType = TextInputType.visiblePassword,
     this.textInputAction = TextInputAction.next,
-    this.textColor = ThemeColors.black,
-    this.labelColor = ThemeColors.inputLabelColor,
-    this.borderColor = ThemeColors.grey,
+    this.textColor = ThemeColors.darkGrey,
+    this.labelColor = ThemeColors.greyLabelColor,
+    this.borderColor = ThemeColors.lightGrey,
     this.errorColor = ThemeColors.red,
-    this.backgroundColor = ThemeColors.grey,
+    this.backgroundColor = ThemeColors.lightGrey,
   }) : super(key: key);
 
   String get fullFormControlName => CommonUtilities.joinList([formGroupName, formControlName], separator: '.');

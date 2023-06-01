@@ -27,9 +27,7 @@ class Routes {
     Routes.user: NavigationItem(
       userRequired: true,
       body: (_) => const UserScreen(),
-      appBar: (_) => const AppBarUserWidget(
-        title: 'User',
-      ),
+      appBar: (_) => const AppBarUserWidget(),
     ),
   };
 }

@@ -16,7 +16,7 @@ class ProxyTextIconWidget extends StatelessWidget {
   const ProxyTextIconWidget({
     Key? key,
     this.text = '',
-    this.color = ThemeColors.black,
+    this.color = ThemeColors.darkGrey,
     required this.icon,
     this.width = 50.0,
     this.isUppercase = false,
@@ -36,7 +36,7 @@ class ProxyTextIconWidget extends StatelessWidget {
         const ProxySpacingVerticalWidget(),
         ProxyTextWidget(
           text: text,
-          color: color,
+          fontColorType: ProxyFontColor.dark,
           isUppercase: isUppercase,
           fontSize: ProxyFontSize.extraLarge,
           fontWeight: ProxyFontWeight.semiBold,

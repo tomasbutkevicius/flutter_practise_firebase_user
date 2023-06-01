@@ -37,7 +37,7 @@ class ProxyAlertDialog extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(2.0),
           border: Border.all(
-            color: ThemeColors.grey,
+            color: ThemeColors.lightGrey,
           ),
         ),
         child: SingleChildScrollView(

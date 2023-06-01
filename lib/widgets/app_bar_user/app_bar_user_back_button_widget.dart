@@ -29,7 +29,7 @@ class AppBarUserBackButtonWidget extends StatelessWidget {
       onPressed: () => onPressed(context),
       child: const LocalImageWrapperWidget(
         image: IconsConstants.arrowBack,
-        color: ThemeColors.black,
+        color: ThemeColors.darkGrey,
         width: 16,
       ),
     );

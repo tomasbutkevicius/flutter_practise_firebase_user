@@ -15,7 +15,7 @@ class LocalImageWrapperWidget extends StatelessWidget {
     this.width,
     this.height,
     this.color,
-    this.errorColor = ThemeColors.black,
+    this.errorColor = ThemeColors.darkGrey,
   }) : super(key: key);
 
   Widget _buildError(BuildContext context, Object error, StackTrace? stackTrace) {
