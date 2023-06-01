@@ -8,11 +8,11 @@ import 'package:flutter_practise_user_firebase/widgets/proxy/spacing/proxy_spaci
 import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
 
 class InvalidRouteScreen extends StatelessWidget {
-  final String path;
+  final String message;
 
   const InvalidRouteScreen({
     Key? key,
-    required this.path,
+    required this.message,
   }) : super(key: key);
 
   @override
@@ -25,7 +25,7 @@ class InvalidRouteScreen extends StatelessWidget {
             ProxyTextWidget(
               fontSize: ProxyFontSize.huge,
               fontWeight: ProxyFontWeight.semiBold,
-              text: '${MessagesConstants.invalidRoute}: $path',
+              text: '${MessagesConstants.screenNotFound}: $message',
             ),
             const ProxySpacingVerticalWidget(),
             ProxyButtonTextWidget(

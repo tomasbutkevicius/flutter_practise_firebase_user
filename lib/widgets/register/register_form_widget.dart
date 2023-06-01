@@ -20,7 +20,14 @@ class _RegisterFormWidgetState extends State<RegisterFormWidget> {
   @override
   void initState() {
     super.initState();
-    _formModel = FormRegisterModel();
+    _formModel = FormRegisterModel.fromState(context);
+  }
+
+
+  @override
+  void dispose() {
+    _formModel.persis();
+    super.dispose();
   }
 
   void _onSubmitted() {

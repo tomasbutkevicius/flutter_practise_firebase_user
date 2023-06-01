@@ -3,18 +3,16 @@ import 'package:flutter_practise_user_firebase/constants/icons.dart';
 import 'package:flutter_practise_user_firebase/constants/proxy.dart';
 import 'package:flutter_practise_user_firebase/constants/styles.dart';
 import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
-import 'package:flutter_practise_user_firebase/widgets/app_bar/app_bar_back_button_widget.dart';
+import 'package:flutter_practise_user_firebase/widgets/app_bar_user/app_bar_user_back_button_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/common/local_image_wrapper_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
 
-class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
+class AppBarUserWidget extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
-  final bool showBackBtn;
 
-  const AppBarWidget({
+  const AppBarUserWidget({
     super.key,
     this.title,
-    this.showBackBtn = false,
   });
 
   @override
@@ -33,12 +31,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            !showBackBtn
-                ? const Icon(
-                    Icons.arrow_back,
-                    color: ThemeColors.white,
-                  )
-                : const AppBarBackButtonWidget(),
+            const AppBarUserBackButtonWidget(),
             title == null
                 ? const Icon(
                     Icons.arrow_back,

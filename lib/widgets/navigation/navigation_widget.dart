@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_practise_user_firebase/bloc/user/user_bloc.dart';
+import 'package:flutter_practise_user_firebase/constants/messages.dart';
 import 'package:flutter_practise_user_firebase/constants/settings.dart';
 import 'package:flutter_practise_user_firebase/models/navigation/navigation_item_model.dart';
 import 'package:flutter_practise_user_firebase/models/navigation/navigation_params_model.dart';
@@ -20,12 +23,13 @@ class NavigationWidget extends StatelessWidget {
 
   PreferredSizeWidget? get _appBar => item!.appBar(params);
 
-  @override
-  Widget build(BuildContext context) {
-    if (item == null) {
-      return Scaffold(
+  bool _buildWhen(UserState previousState, UserState state) => previousState.user != state.user;
+
+  Widget _builder(BuildContext context, UserState state) {
+    if (!state.isLoggedIn && item!.userRequired) {
+      return const Scaffold(
         body: InvalidRouteScreen(
-          path: path,
+          message: MessagesConstants.loginRequired,
         ),
       );
     }
@@ -41,6 +45,22 @@ class NavigationWidget extends StatelessWidget {
           child: _body,
         ),
       ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (item == null) {
+      return Scaffold(
+        body: InvalidRouteScreen(
+          message: path,
+        ),
+      );
+    }
+
+    return BlocBuilder<UserBloc, UserState>(
+      builder: _builder,
+      buildWhen: _buildWhen,
     );
   }
 }
