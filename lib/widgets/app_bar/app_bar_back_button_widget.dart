@@ -16,7 +16,7 @@ class AppBarBackButtonWidget extends StatelessWidget {
       onPressed: () => NavigationUtilities.goBack(context),
       child: const LocalImageWrapperWidget(
         image: IconsConstants.arrowBack,
-        color: ThemeColors.darkGrey,
+        color: ThemeColors.greyTextDark,
         width: 16,
       ),
     );

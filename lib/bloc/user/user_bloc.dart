@@ -1,5 +1,6 @@
 import 'dart:async';
 import 'package:equatable/equatable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_practise_user_firebase/bloc/user/user_repository.dart';
 import 'package:flutter_practise_user_firebase/models/form/form_login_model.dart';
@@ -21,7 +22,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     on<UserEventRegister>(_mapEventRegister);
   }
 
-  void _mapEventLogOut(UserEventLogOut event, Emitter<UserState> emit) {
+  Future _mapEventLogOut(UserEventLogOut event, Emitter<UserState> emit) async {
     emit(
       const UserState(),
     );
@@ -35,11 +36,16 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     );
     try {
       UserModel user = await repository.login(event.formModel);
-
       emit(
         state.copyWith(
           status: RequestStatus.done,
           user: user,
+        ),
+      );
+    } on FirebaseException catch (e) {
+      emit(
+        state.copyWith(
+          status: RequestStatus.errorFirebase(e),
         ),
       );
     } catch (e) {
@@ -57,11 +63,28 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         status: RequestStatus.fetching,
       ),
     );
-
-    emit(
-      state.copyWith(
-        status: RequestStatus.done,
-      ),
-    );
+    try {
+      await repository.register(event.formModel);
+      emit(
+        state.copyWith(
+          status: const RequestStatus(
+            value: RequestStatusValue.done,
+            message: 'Register success',
+          ),
+        ),
+      );
+    } on FirebaseException catch (e) {
+      emit(
+        state.copyWith(
+          status: RequestStatus.errorFirebase(e),
+        ),
+      );
+    } catch (e) {
+      emit(
+        state.copyWith(
+          status: RequestStatus.error(),
+        ),
+      );
+    }
   }
 }

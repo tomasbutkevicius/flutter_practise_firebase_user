@@ -5,4 +5,7 @@ class IconsConstants {
   static const String menu = 'assets/png/menu.png';
   static const String user = 'assets/png/user.png';
   static const String circle = 'assets/png/circle.png';
+  static const String phone = 'assets/png/phone.png';
+  static const String email = 'assets/png/email.png';
+  static const String circleProject = 'assets/png/circle_project.png';
 }

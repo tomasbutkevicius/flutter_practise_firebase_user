@@ -32,7 +32,6 @@ class LoadingIndicatorDialogWidget {
     showDialog(
       context: context,
       builder: _builder,
-      barrierDismissible: false,
     );
   }
 }

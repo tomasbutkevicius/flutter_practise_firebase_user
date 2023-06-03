@@ -51,4 +51,8 @@ class FormLoginModel {
       'password': form.value[fieldNamePassword],
     };
   }
+
+  String get valueEmail => form.control(fieldNameEmail).value as String;
+
+  String get valuePassword => form.control(fieldNamePassword).value as String;
 }

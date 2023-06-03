@@ -14,7 +14,7 @@ class ProxyDividerHorizontalWidget extends StatelessWidget {
     this.height = 20.0,
     this.indent,
     this.endIndent,
-    this.color = ThemeColors.lightGrey,
+    this.color = ThemeColors.greyInputFill,
   }) : super(key: key);
 
   Widget _builder() {
@@ -57,7 +57,7 @@ class ProxyDividerVerticalWidget extends StatelessWidget {
       width: width,
       indent: indent,
       endIndent: endIndent,
-      color: ThemeColors.lightGrey,
+      color: ThemeColors.greyInputFill,
     );
   }
 

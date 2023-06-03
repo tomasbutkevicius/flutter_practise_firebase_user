@@ -18,7 +18,7 @@ class ProxyTextWidget extends StatelessWidget {
   const ProxyTextWidget({
     Key? key,
     required this.text,
-    this.color = ThemeColors.darkGrey,
+    this.color = ThemeColors.greyTextDark,
     this.fontColorType,
     this.maxLines,
     this.isOverflow = false,

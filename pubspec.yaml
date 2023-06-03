@@ -21,6 +21,8 @@ dependencies:
   reactive_forms: ^14.2.0
   sprintf: ^7.0.0
   dio: ^4.0.0
+  firebase_core: ^2.13.1
+  firebase_auth: ^4.6.2
 
 dev_dependencies:
   flutter_test:

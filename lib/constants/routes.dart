@@ -6,12 +6,12 @@ import 'package:flutter_practise_user_firebase/widgets/app_bar/app_bar_widget.da
 import 'package:flutter_practise_user_firebase/widgets/app_bar_user/app_bar_user_widget.dart';
 
 class Routes {
-  static const String home = '/';
+  static const String login = '/login';
   static const String register = '/register';
   static const String user = '/user';
 
   static Map<String, NavigationItem> mapping = {
-    Routes.home: NavigationItem(
+    Routes.login: NavigationItem(
       body: (_) => const LoginScreen(),
       appBar: (_) => const AppBarWidget(
         title: 'Sign In',
