@@ -52,8 +52,7 @@ class ProxyAlertDialog extends StatelessWidget {
                     const ProxySpacingVerticalWidget(),
                     ProxyTextWidget(
                       text: title!,
-                      fontSize: ProxyFontSize.large,
-                      fontWeight: ProxyFontWeight.semiBold,
+                      fontWeight: ProxyFontWeight.bold,
                     ),
                     const ProxySpacingVerticalWidget(),
                   ],
@@ -63,11 +62,13 @@ class ProxyAlertDialog extends StatelessWidget {
                 children: [
                   ProxyButtonTextWidget(
                     text: MessagesConstants.yes.toUpperCase(),
+                    fontSize: ProxyFontSize.small,
                     onPressed: onAccept,
                   ),
                   ProxyButtonTextWidget(
                     color: ThemeColors.white,
                     text: MessagesConstants.no.toUpperCase(),
+                    fontSize: ProxyFontSize.small,
                     textColor: ThemeColors.greyText,
                     border: Border.all(
                       color: ThemeColors.greyBorders,

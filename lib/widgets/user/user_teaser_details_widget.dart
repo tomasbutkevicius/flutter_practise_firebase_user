@@ -34,8 +34,9 @@ class UserTeaserDetailsWidget extends StatelessWidget {
         const ProxySpacingVerticalWidget(),
         ProxyTextWidget(
           text: user.username,
-          fontWeight: ProxyFontWeight.semiBold,
+          fontWeight: ProxyFontWeight.regular,
           fontSize: ProxyFontSize.extraLarge,
+          fontFamily: ProxyFontFamily.secondary,
         ),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -66,7 +67,7 @@ class UserTeaserDetailsWidget extends StatelessWidget {
         const ProxyTextWidget(
           isUnderline: true,
           color: ThemeColors.skin,
-          fontWeight: ProxyFontWeight.extraBold,
+          fontWeight: ProxyFontWeight.bold,
           text: 'Edit',
         ),
         const ProxySpacingVerticalWidget(),

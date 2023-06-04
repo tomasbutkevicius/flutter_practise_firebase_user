@@ -39,7 +39,7 @@ class ProxyTextIconWidget extends StatelessWidget {
           fontColorType: ProxyFontColor.dark,
           isUppercase: isUppercase,
           fontSize: ProxyFontSize.extraLarge,
-          fontWeight: ProxyFontWeight.semiBold,
+          fontWeight: ProxyFontWeight.bold,
         ),
       ],
     );

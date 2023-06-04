@@ -23,8 +23,8 @@ class InvalidRouteScreen extends StatelessWidget {
         child: Column(
           children: <Widget>[
             ProxyTextWidget(
-              fontSize: ProxyFontSize.huge,
-              fontWeight: ProxyFontWeight.semiBold,
+              fontSize: ProxyFontSize.extraLarge,
+              fontWeight: ProxyFontWeight.bold,
               text: '${MessagesConstants.screenNotFound}: $message',
             ),
             const ProxySpacingVerticalWidget(),

@@ -11,7 +11,7 @@ class AppBarLogoWidget extends StatelessWidget {
     return const Center(
       child: ProxyTextWidget(
         fontSize: ProxyFontSize.extraLarge,
-        fontWeight: ProxyFontWeight.extraBold,
+        fontWeight: ProxyFontWeight.bold,
         textAlign: TextAlign.center,
         text: 'Sign In',
       ),

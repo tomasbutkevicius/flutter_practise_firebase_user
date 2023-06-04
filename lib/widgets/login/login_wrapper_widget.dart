@@ -8,14 +8,11 @@ import 'package:flutter_practise_user_firebase/utilities/navigation_utilities.da
 import 'package:flutter_practise_user_firebase/utilities/status_utilities.dart';
 import 'package:flutter_practise_user_firebase/widgets/common/local_image_wrapper_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/login/login_form_widget.dart';
+import 'package:flutter_practise_user_firebase/widgets/login/login_sign_up_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/proxy/button/proxy_button_text_widget.dart';
 
 class LoginWrapperWidget extends StatelessWidget {
   const LoginWrapperWidget({Key? key}) : super(key: key);
-
-  void _onPressed(BuildContext context) {
-    NavigationUtilities.push(path: Routes.register, context: context);
-  }
 
   void _listener(BuildContext context, UserState state) {
     StatusUtilities.handleStatus(context, state.status);
@@ -39,12 +36,7 @@ class LoginWrapperWidget extends StatelessWidget {
           height: 145.0,
         ),
         const LoginFormWidget(),
-        ProxyButtonTextWidget(
-          onPressed: () => _onPressed(context),
-          text: 'Sign up',
-          color: ThemeColors.white,
-          textColor: ThemeColors.greyTextDark,
-        ),
+        const LoginSignUpWidget(),
       ],
     );
   }

@@ -14,6 +14,7 @@ class ProxyTextWidget extends StatelessWidget {
   final TextAlign textAlign;
   final ProxyFontSize fontSize;
   final ProxyFontWeight fontWeight;
+  final ProxyFontFamily fontFamily;
 
   const ProxyTextWidget({
     Key? key,
@@ -28,6 +29,7 @@ class ProxyTextWidget extends StatelessWidget {
     this.textAlign = TextAlign.left,
     this.fontSize = ProxyFontSize.medium,
     this.fontWeight = ProxyFontWeight.regular,
+    this.fontFamily = ProxyFontFamily.primary,
   }) : super(key: key);
 
   @override
@@ -47,6 +49,7 @@ class ProxyTextWidget extends StatelessWidget {
             : isUnderline
                 ? TextDecoration.underline
                 : null,
+        fontFamily: ProxyConstants.getFontFamily(fontFamily),
       ),
     );
   }

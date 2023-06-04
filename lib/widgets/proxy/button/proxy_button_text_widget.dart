@@ -12,6 +12,7 @@ class ProxyButtonTextWidget extends StatelessWidget {
   final VoidCallback? onPressed;
   final BoxBorder? border;
   final bool isUpperCase;
+  final ProxyFontFamily fontFamily;
 
   const ProxyButtonTextWidget({
     Key? key,
@@ -19,11 +20,12 @@ class ProxyButtonTextWidget extends StatelessWidget {
     this.color = ThemeColors.mintBlue,
     this.textColor,
     this.fontSize = ProxyFontSize.medium,
-    this.fontWeight = ProxyFontWeight.semiBold,
+    this.fontWeight = ProxyFontWeight.bold,
     this.padding = const EdgeInsets.symmetric(
       vertical: 20.0,
       horizontal: 40.0,
     ),
+    this.fontFamily = ProxyFontFamily.primary,
     this.border,
     this.onPressed,
     this.isUpperCase = false,
@@ -53,6 +55,7 @@ class ProxyButtonTextWidget extends StatelessWidget {
           isUpperCase ? text.toUpperCase() : text,
           style: TextStyle(
             color: textColor,
+            fontFamily: ProxyConstants.getFontFamily(fontFamily),
           ),
         ),
       ),

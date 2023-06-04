@@ -1,36 +1,31 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_practise_user_firebase/constants/styles.dart';
 import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
 
-enum ProxyFontSize { smallest, extraSmall, small, medium, large, extraLarge, huge, extraHuge }
+enum ProxyFontSize { small, medium, large, extraLarge }
 
 enum ProxyFontColor { dark, light, white, error }
 
-enum ProxyFontWeight { regular, semiBold, bold, extraBold }
+enum ProxyFontFamily { primary, secondary }
+
+enum ProxyFontWeight { regular, bold }
 
 enum ProxySpacing { extraSmall, small, medium, large, extraLarge, huge }
 
-enum ProxyFadeType { small, medium }
-
 class ProxyConstants {
   static const Map<ProxyFontSize, double> sizeVariants = {
-    ProxyFontSize.smallest: 12.0,
-    ProxyFontSize.extraSmall: 14.0,
-    ProxyFontSize.small: 16.0,
-    ProxyFontSize.medium: 18.0,
-    ProxyFontSize.large: 20.0,
+    ProxyFontSize.small: 14.0,
+    ProxyFontSize.medium: 16.0,
+    ProxyFontSize.large: 18.0,
     ProxyFontSize.extraLarge: 24.0,
-    ProxyFontSize.huge: 28.0,
-    ProxyFontSize.extraHuge: 32.0,
   };
 
   static double getFontSize(ProxyFontSize value) => sizeVariants[value]!;
 
   static const Map<ProxyFontWeight, FontWeight> fontWeightVariants = {
-    ProxyFontWeight.regular: FontWeight.w400,
-    ProxyFontWeight.semiBold: FontWeight.w500,
-    ProxyFontWeight.bold: FontWeight.w600,
-    ProxyFontWeight.extraBold: FontWeight.w900,
+    ProxyFontWeight.regular: FontWeight.w500,
+    ProxyFontWeight.bold: FontWeight.w900,
   };
 
   static FontWeight getFontWeight(ProxyFontWeight value) => fontWeightVariants[value]!;
@@ -43,6 +38,13 @@ class ProxyConstants {
   };
 
   static Color getFontColor(ProxyFontColor value) => fontColorVariants[value]!;
+
+  static Map<ProxyFontFamily, String> fontFamilyVariants = {
+    ProxyFontFamily.primary: StylesConstants.fontFamilyPrimary,
+    ProxyFontFamily.secondary: StylesConstants.fontFamilySecondary,
+  };
+
+  static String getFontFamily(ProxyFontFamily value) => fontFamilyVariants[value]!;
 
   static const Map<ProxySpacing, double> spacingVariants = {
     ProxySpacing.extraSmall: 5.0,

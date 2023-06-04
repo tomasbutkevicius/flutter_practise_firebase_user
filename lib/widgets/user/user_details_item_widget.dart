@@ -50,7 +50,7 @@ class UserDetailsItemWidget extends StatelessWidget {
               children: [
                 ProxyTextWidget(
                   color: ThemeColors.greyTextLabel,
-                  fontSize: ProxyFontSize.extraSmall,
+                  fontSize: ProxyFontSize.small,
                   text: label,
                 ),
                 const ProxySpacingVerticalWidget(

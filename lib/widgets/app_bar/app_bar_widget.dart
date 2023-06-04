@@ -45,8 +45,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                     color: ThemeColors.white,
                   )
                 : ProxyTextWidget(
-                    fontSize: ProxyFontSize.extraLarge,
-                    fontWeight: ProxyFontWeight.extraBold,
+                    fontSize: ProxyFontSize.large,
+                    fontWeight: ProxyFontWeight.bold,
                     textAlign: TextAlign.center,
                     text: title!,
                   ),

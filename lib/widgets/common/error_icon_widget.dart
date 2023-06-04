@@ -30,9 +30,9 @@ class ErrorIconWidget extends StatelessWidget {
           ),
           ProxyTextWidget(
             text: text,
-            fontSize: ProxyFontSize.large,
+            fontSize: ProxyFontSize.extraLarge,
             fontColorType: ProxyFontColor.light,
-            fontWeight: ProxyFontWeight.semiBold,
+            fontWeight: ProxyFontWeight.bold,
           ),
         ],
       ),

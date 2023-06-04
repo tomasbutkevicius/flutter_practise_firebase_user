@@ -10,7 +10,7 @@ ThemeData appTheme() {
     dividerColor: ThemeColors.white,
     scaffoldBackgroundColor: ThemeColors.white,
     canvasColor: ThemeColors.white,
-    fontFamily: StylesConstants.fontFamily,
+    fontFamily: StylesConstants.fontFamilyPrimary,
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
