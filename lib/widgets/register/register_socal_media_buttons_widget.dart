@@ -7,13 +7,7 @@ import 'package:flutter/material.dart';
 class RegisterSocialMediaButtonsWidget extends StatelessWidget {
   const RegisterSocialMediaButtonsWidget({Key? key}) : super(key: key);
 
-  void _onPressed(BuildContext context) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Sorry, not implemented :(, you\'ll need to wait a bit ;)'),
-      ),
-    );
-  }
+  void _onPressed(BuildContext context) {}
 
   @override
   Widget build(BuildContext context) {
