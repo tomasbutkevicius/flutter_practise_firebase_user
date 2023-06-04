@@ -6,11 +6,6 @@ class UserScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Container(
-        padding: const EdgeInsets.all(20),
-        child: const UserWrapperWidget(),
-      ),
-    );
+    return const UserWrapperWidget();
   }
 }

@@ -4,9 +4,9 @@ import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
 
 ThemeData appTheme() {
   return ThemeData(
-    primaryColor: ThemeColors.green,
-    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ThemeColors.blue),
-    hintColor: ThemeColors.darkGrey,
+    primaryColor: ThemeColors.mintBlue,
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ThemeColors.greyTextDark),
+    hintColor: ThemeColors.greyTextDark,
     dividerColor: ThemeColors.white,
     scaffoldBackgroundColor: ThemeColors.white,
     canvasColor: ThemeColors.white,

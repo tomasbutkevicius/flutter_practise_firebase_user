@@ -57,4 +57,8 @@ class FormRegisterModel {
   }
 
   void persis() => bloc.add(FormsEventSet(name, form));
+
+  String get valueEmail => form.control(fieldNameEmail).value as String;
+
+  String get valuePassword => form.control(fieldNamePassword).value as String;
 }

@@ -37,7 +37,7 @@ class ProxyAlertDialog extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(2.0),
           border: Border.all(
-            color: ThemeColors.lightGrey,
+            color: ThemeColors.greyInputFill,
           ),
         ),
         child: SingleChildScrollView(
@@ -58,22 +58,23 @@ class ProxyAlertDialog extends StatelessWidget {
                     const ProxySpacingVerticalWidget(),
                   ],
                 ),
-              Container(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    ProxyButtonTextWidget(
-                      color: ThemeColors.green,
-                      text: MessagesConstants.yes,
-                      onPressed: onAccept,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ProxyButtonTextWidget(
+                    text: MessagesConstants.yes.toUpperCase(),
+                    onPressed: onAccept,
+                  ),
+                  ProxyButtonTextWidget(
+                    color: ThemeColors.white,
+                    text: MessagesConstants.no.toUpperCase(),
+                    textColor: ThemeColors.greyText,
+                    border: Border.all(
+                      color: ThemeColors.greyBorders,
                     ),
-                    ProxyButtonTextWidget(
-                      color: ThemeColors.red,
-                      text: MessagesConstants.no,
-                      onPressed: onCancel,
-                    ),
-                  ],
-                ),
+                    onPressed: onCancel,
+                  ),
+                ],
               ),
               const ProxySpacingVerticalWidget(),
             ],

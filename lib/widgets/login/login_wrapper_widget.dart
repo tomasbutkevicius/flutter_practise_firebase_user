@@ -43,7 +43,7 @@ class LoginWrapperWidget extends StatelessWidget {
           onPressed: () => _onPressed(context),
           text: 'Sign up',
           color: ThemeColors.white,
-          textColor: ThemeColors.darkGrey,
+          textColor: ThemeColors.greyTextDark,
         ),
       ],
     );

@@ -36,8 +36,8 @@ class ProxyConstants {
   static FontWeight getFontWeight(ProxyFontWeight value) => fontWeightVariants[value]!;
 
   static const Map<ProxyFontColor, Color> fontColorVariants = {
-    ProxyFontColor.dark: ThemeColors.darkGrey,
-    ProxyFontColor.light: ThemeColors.grey,
+    ProxyFontColor.dark: ThemeColors.greyTextDark,
+    ProxyFontColor.light: ThemeColors.greyText,
     ProxyFontColor.white: ThemeColors.white,
     ProxyFontColor.error: ThemeColors.red,
   };

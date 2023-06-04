@@ -29,7 +29,6 @@ class InvalidRouteScreen extends StatelessWidget {
             ),
             const ProxySpacingVerticalWidget(),
             ProxyButtonTextWidget(
-              color: ThemeColors.blue,
               text: MessagesConstants.goBack,
               onPressed: () => NavigationUtilities.reset(context),
             ),

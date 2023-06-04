@@ -16,7 +16,7 @@ class ProxyTextIconWidget extends StatelessWidget {
   const ProxyTextIconWidget({
     Key? key,
     this.text = '',
-    this.color = ThemeColors.darkGrey,
+    this.color = ThemeColors.greyTextDark,
     required this.icon,
     this.width = 50.0,
     this.isUppercase = false,

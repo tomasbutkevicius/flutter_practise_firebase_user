@@ -10,12 +10,13 @@ class ProxyButtonTextWidget extends StatelessWidget {
   final ProxyFontWeight fontWeight;
   final EdgeInsetsGeometry padding;
   final VoidCallback? onPressed;
+  final BoxBorder? border;
   final bool isUpperCase;
 
   const ProxyButtonTextWidget({
     Key? key,
     required this.text,
-    this.color = ThemeColors.mint_blue,
+    this.color = ThemeColors.mintBlue,
     this.textColor,
     this.fontSize = ProxyFontSize.medium,
     this.fontWeight = ProxyFontWeight.semiBold,
@@ -23,28 +24,36 @@ class ProxyButtonTextWidget extends StatelessWidget {
       vertical: 20.0,
       horizontal: 40.0,
     ),
+    this.border,
     this.onPressed,
     this.isUpperCase = false,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return TextButton(
-      onPressed: onPressed,
-      style: ButtonStyle(
-        tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        backgroundColor: MaterialStateProperty.all<Color>(color),
-        foregroundColor: MaterialStateProperty.all<Color>(ThemeColors.white),
-        padding: MaterialStateProperty.all<EdgeInsetsGeometry>(padding),
-        textStyle: MaterialStateProperty.all<TextStyle>(TextStyle(
-          fontSize: ProxyConstants.getFontSize(fontSize),
-          fontWeight: ProxyConstants.getFontWeight(fontWeight),
-        )),
+    return Container(
+      decoration: BoxDecoration(
+        border: border,
       ),
-      child: Text(
-        isUpperCase ? text.toUpperCase() : text,
-        style: TextStyle(
-          color: textColor,
+      child: TextButton(
+        onPressed: onPressed,
+        style: ButtonStyle(
+          tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+          backgroundColor: MaterialStateProperty.all<Color>(color),
+          foregroundColor: MaterialStateProperty.all<Color>(ThemeColors.white),
+          padding: MaterialStateProperty.all<EdgeInsetsGeometry>(padding),
+          textStyle: MaterialStateProperty.all<TextStyle>(
+            TextStyle(
+              fontSize: ProxyConstants.getFontSize(fontSize),
+              fontWeight: ProxyConstants.getFontWeight(fontWeight),
+            ),
+          ),
+        ),
+        child: Text(
+          isUpperCase ? text.toUpperCase() : text,
+          style: TextStyle(
+            color: textColor,
+          ),
         ),
       ),
     );

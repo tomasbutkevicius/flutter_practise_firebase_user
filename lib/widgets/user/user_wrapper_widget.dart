@@ -14,11 +14,11 @@ class UserWrapperWidget extends StatelessWidget {
   }
 
   Widget _builder(BuildContext context, UserState state) {
-    if (state.status.value == RequestStatusValue.fetching) {
+    if (state.status.value == RequestStatusValue.fetching || state.user == null) {
       return const LoadingIndicatorWidget();
     }
 
-    if (state.status.value == RequestStatusValue.error || state.user == null) {
+    if (state.status.value == RequestStatusValue.error) {
       return const ErrorIconWidget();
     }
 
