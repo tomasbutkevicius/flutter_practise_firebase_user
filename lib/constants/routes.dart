@@ -1,9 +1,9 @@
 import 'package:flutter_practise_user_firebase/models/navigation/navigation_item_model.dart';
-import 'package:flutter_practise_user_firebase/screens/login_screen.dart';
-import 'package:flutter_practise_user_firebase/screens/register_screen.dart';
-import 'package:flutter_practise_user_firebase/screens/user_screen.dart';
-import 'package:flutter_practise_user_firebase/widgets/app_bar/app_bar_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/app_bar_user/app_bar_user_widget.dart';
+import 'package:flutter_practise_user_firebase/widgets/app_bar/app_bar_widget.dart';
+import 'package:flutter_practise_user_firebase/screens/register_screen.dart';
+import 'package:flutter_practise_user_firebase/screens/login_screen.dart';
+import 'package:flutter_practise_user_firebase/screens/user_screen.dart';
 
 class Routes {
   static const String login = '/login';

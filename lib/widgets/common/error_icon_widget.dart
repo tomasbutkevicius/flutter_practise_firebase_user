@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_practise_user_firebase/constants/messages.dart';
-import 'package:flutter_practise_user_firebase/constants/proxy.dart';
 import 'package:flutter_practise_user_firebase/widgets/proxy/spacing/proxy_spacing_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
+import 'package:flutter_practise_user_firebase/constants/messages.dart';
+import 'package:flutter_practise_user_firebase/constants/proxy.dart';
+import 'package:flutter/material.dart';
 
 class ErrorIconWidget extends StatelessWidget {
   final String text;

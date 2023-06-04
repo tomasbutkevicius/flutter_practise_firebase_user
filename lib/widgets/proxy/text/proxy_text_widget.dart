@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_practise_user_firebase/constants/proxy.dart';
 import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
+import 'package:flutter_practise_user_firebase/constants/proxy.dart';
+import 'package:flutter/cupertino.dart';
 
 class ProxyTextWidget extends StatelessWidget {
   final String text;

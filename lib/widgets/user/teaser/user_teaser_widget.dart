@@ -1,24 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_practise_user_firebase/bloc/user/user_bloc.dart';
-import 'package:flutter_practise_user_firebase/constants/icons.dart';
-import 'package:flutter_practise_user_firebase/constants/messages.dart';
-import 'package:flutter_practise_user_firebase/constants/proxy.dart';
+import 'package:flutter_practise_user_firebase/widgets/proxy/spacing/proxy_spacing_widget.dart';
+import 'package:flutter_practise_user_firebase/widgets/common/local_image_wrapper_widget.dart';
+import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
 import 'package:flutter_practise_user_firebase/models/user/user_model.dart';
 import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
-import 'package:flutter_practise_user_firebase/widgets/common/local_image_wrapper_widget.dart';
-import 'package:flutter_practise_user_firebase/widgets/proxy/button/proxy_button_text_widget.dart';
-import 'package:flutter_practise_user_firebase/widgets/proxy/spacing/proxy_spacing_widget.dart';
-import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
+import 'package:flutter_practise_user_firebase/constants/proxy.dart';
+import 'package:flutter_practise_user_firebase/constants/icons.dart';
+import 'package:flutter/material.dart';
 
-class UserTeaserDetailsWidget extends StatelessWidget {
+class UserTeaserWidget extends StatelessWidget {
   final UserModel user;
 
-  const UserTeaserDetailsWidget({Key? key, required this.user}) : super(key: key);
-
-  void _onLogout(BuildContext context) {
-    context.read<UserBloc>().add(UserEventLogOut());
-  }
+  const UserTeaserWidget({Key? key, required this.user}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -69,25 +61,6 @@ class UserTeaserDetailsWidget extends StatelessWidget {
           color: ThemeColors.skin,
           fontWeight: ProxyFontWeight.bold,
           text: 'Edit',
-        ),
-        const ProxySpacingVerticalWidget(),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            ProxyButtonTextWidget(
-              color: ThemeColors.white,
-              border: Border.all(
-                color: ThemeColors.greyBorders,
-              ),
-              textColor: ThemeColors.greyText,
-              onPressed: () {},
-              text: MessagesConstants.aboutMe,
-            ),
-            ProxyButtonTextWidget(
-              text: MessagesConstants.logout,
-              onPressed: () => _onLogout(context),
-            ),
-          ],
         ),
       ],
     );

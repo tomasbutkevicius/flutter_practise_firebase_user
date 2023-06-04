@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_practise_user_firebase/constants/styles.dart';
 import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
+import 'package:flutter_practise_user_firebase/constants/styles.dart';
+import 'package:flutter/material.dart';
 
 ThemeData appTheme() {
   return ThemeData(

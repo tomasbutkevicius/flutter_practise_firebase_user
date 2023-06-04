@@ -10,6 +10,7 @@ class MessagesConstants {
   static const String phoneNumber = 'Phone Number';
   static const String email = 'Email';
   static const String completedProjects = 'Completed projects';
+
   //Form messages
   static const String invalidEmail = 'Invalid email';
   static const String fieldIsRequired = 'Field is required';

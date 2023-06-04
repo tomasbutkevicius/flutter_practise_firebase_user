@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_practise_user_firebase/bloc/user/user_bloc.dart';
-import 'package:flutter_practise_user_firebase/constants/messages.dart';
-import 'package:flutter_practise_user_firebase/constants/settings.dart';
-import 'package:flutter_practise_user_firebase/models/navigation/navigation_item_model.dart';
 import 'package:flutter_practise_user_firebase/models/navigation/navigation_params_model.dart';
+import 'package:flutter_practise_user_firebase/models/navigation/navigation_item_model.dart';
 import 'package:flutter_practise_user_firebase/screens/invalid_route_screen.dart';
+import 'package:flutter_practise_user_firebase/bloc/user/user_bloc.dart';
+import 'package:flutter_practise_user_firebase/constants/settings.dart';
+import 'package:flutter_practise_user_firebase/constants/messages.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/material.dart';
 
 class NavigationWidget extends StatelessWidget {
   final String path;

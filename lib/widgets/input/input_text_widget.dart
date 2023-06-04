@@ -1,12 +1,12 @@
+import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
+import 'package:flutter_practise_user_firebase/utilities/form/form_validators.dart';
+import 'package:flutter_practise_user_firebase/utilities/common_utilities.dart';
+import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
+import 'package:flutter_practise_user_firebase/constants/regexp.dart';
+import 'package:flutter_practise_user_firebase/constants/proxy.dart';
+import 'package:reactive_forms/reactive_forms.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_practise_user_firebase/constants/proxy.dart';
-import 'package:flutter_practise_user_firebase/constants/regexp.dart';
-import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
-import 'package:flutter_practise_user_firebase/utilities/common_utilities.dart';
-import 'package:flutter_practise_user_firebase/utilities/form/form_validators.dart';
-import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
-import 'package:reactive_forms/reactive_forms.dart';
 
 class InputTextWidget extends StatelessWidget {
   final bool? filled;

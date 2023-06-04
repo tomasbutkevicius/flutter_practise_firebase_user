@@ -1,5 +1,5 @@
-import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:equatable/equatable.dart';
 
 class UserModel extends Equatable {
   final String email;

@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_practise_user_firebase/constants/proxy.dart';
-import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
-import 'package:flutter_practise_user_firebase/widgets/common/local_image_wrapper_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/proxy/spacing/proxy_spacing_widget.dart';
+import 'package:flutter_practise_user_firebase/widgets/common/local_image_wrapper_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
+import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
+import 'package:flutter_practise_user_firebase/constants/proxy.dart';
+import 'package:flutter/material.dart';
 
 class UserDetailsItemWidget extends StatelessWidget {
   final String iconPath;

@@ -1,7 +1,7 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_practise_user_firebase/bloc/forms/forms_bloc.dart';
 import 'package:reactive_forms/reactive_forms.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/material.dart';
 
 class FormLoginModel {
   static const String name = 'login';
