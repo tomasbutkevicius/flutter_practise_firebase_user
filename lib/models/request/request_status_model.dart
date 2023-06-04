@@ -1,5 +1,5 @@
-import 'package:dio/dio.dart';
 import 'package:equatable/equatable.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 
 import '../../constants/messages.dart';
@@ -21,6 +21,13 @@ class RequestStatus extends Equatable {
   }) {
     return RequestStatus(
       message: message,
+      value: RequestStatusValue.error,
+    );
+  }
+
+  factory RequestStatus.errorFirebase(FirebaseException exception) {
+    return RequestStatus(
+      message: exception.message ?? MessagesConstants.anErrorHasOccurred,
       value: RequestStatusValue.error,
     );
   }

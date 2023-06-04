@@ -30,20 +30,13 @@ class AppBarUserWidget extends StatelessWidget implements PreferredSizeWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const AppBarUserBackButtonWidget(),
-            title == null
-                ? const Icon(
-                    Icons.arrow_back,
-                    color: ThemeColors.white,
-                  )
-                : ProxyTextWidget(
-                    fontSize: ProxyFontSize.extraLarge,
-                    fontWeight: ProxyFontWeight.extraBold,
-                    textAlign: TextAlign.center,
-                    text: title!,
-                  ),
-            const LocalImageWrapperWidget(
+          children: const [
+            AppBarUserBackButtonWidget(),
+            Icon(
+              Icons.arrow_back,
+              color: ThemeColors.white,
+            ),
+            LocalImageWrapperWidget(
               image: IconsConstants.menu,
               width: 18,
             ),

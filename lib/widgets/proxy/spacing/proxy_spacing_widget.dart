@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_practise_user_firebase/constants/proxy.dart';
+import 'package:flutter/cupertino.dart';
 
 class ProxySpacingVerticalWidget extends StatelessWidget {
   final ProxySpacing size;

@@ -34,6 +34,6 @@ class NavigationStateItem extends Equatable {
   List<Object?> get props => [path, params];
 
   static const home = NavigationStateItem(
-    path: Routes.home,
+    path: Routes.login,
   );
 }

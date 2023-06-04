@@ -1,16 +1,16 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_practise_user_firebase/constants/styles.dart';
 import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
+import 'package:flutter_practise_user_firebase/constants/styles.dart';
+import 'package:flutter/material.dart';
 
 ThemeData appTheme() {
   return ThemeData(
-    primaryColor: ThemeColors.green,
-    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ThemeColors.blue),
-    hintColor: ThemeColors.black,
+    primaryColor: ThemeColors.mintBlue,
+    colorScheme: ColorScheme.fromSwatch().copyWith(secondary: ThemeColors.greyTextDark),
+    hintColor: ThemeColors.greyTextDark,
     dividerColor: ThemeColors.white,
     scaffoldBackgroundColor: ThemeColors.white,
     canvasColor: ThemeColors.white,
-    fontFamily: StylesConstants.fontFamily,
+    fontFamily: StylesConstants.fontFamilyPrimary,
     textButtonTheme: TextButtonThemeData(
       style: ButtonStyle(
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,

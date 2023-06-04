@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_practise_user_firebase/models/request/request_status_model.dart';
 import 'package:flutter_practise_user_firebase/widgets/common/loading_indicator_dialog_widget.dart';
+import 'package:flutter_practise_user_firebase/models/request/request_status_model.dart';
+import 'package:flutter/material.dart';
 
 class StatusUtilities {
   static void handleStatus(BuildContext context, RequestStatus status) {

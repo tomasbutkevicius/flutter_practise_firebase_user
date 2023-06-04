@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class ProxyButtonWrapWidget extends StatelessWidget {
@@ -24,8 +23,8 @@ class ProxyButtonWrapWidget extends StatelessWidget {
   }) : super(key: key);
 
   OutlinedBorder get _shape => RoundedRectangleBorder(
-    side: borderColor == null ? BorderSide.none : BorderSide(color: borderColor!),
-  );
+        side: borderColor == null ? BorderSide.none : BorderSide(color: borderColor!),
+      );
 
   @override
   Widget build(BuildContext context) {

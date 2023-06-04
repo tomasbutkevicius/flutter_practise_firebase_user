@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:equatable/equatable.dart';
 
 class UserModel extends Equatable {
@@ -17,14 +18,14 @@ class UserModel extends Equatable {
     required this.id,
   });
 
-  factory UserModel.fromJson(Map<String, dynamic> json) {
+  factory UserModel.fromCredential(UserCredential credential) {
     return UserModel(
-      email: json['email'],
-      username: json['username'],
-      completedProjects: json['completedProjects'],
-      phone: json['phone'],
-      city: json['city'],
-      id: json['id'],
+      email: credential.user!.email!,
+      username: 'Username',
+      completedProjects: 248,
+      phone: '+3788888888',
+      city: 'New York',
+      id: '112061',
     );
   }
 
