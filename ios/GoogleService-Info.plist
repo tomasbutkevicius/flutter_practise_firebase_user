@@ -19,16 +19,16 @@
 	<key>STORAGE_BUCKET</key>
 	<string>practise-scale3c.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false></false>
+	<false/>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_GCM_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true></true>
+	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:356143591809:ios:ac7c0f866c6e424df8f880</string>
+	<string>1:356143591809:ios:05621217690b64f5f8f880</string>
 </dict>
 </plist>
