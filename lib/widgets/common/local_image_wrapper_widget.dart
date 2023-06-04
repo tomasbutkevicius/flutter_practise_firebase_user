@@ -1,6 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter/material.dart';
 
 class LocalImageWrapperWidget extends StatelessWidget {
   final String image;

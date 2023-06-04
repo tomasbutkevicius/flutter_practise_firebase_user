@@ -1,11 +1,11 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_practise_user_firebase/constants/icons.dart';
-import 'package:flutter_practise_user_firebase/constants/proxy.dart';
-import 'package:flutter_practise_user_firebase/constants/styles.dart';
-import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
 import 'package:flutter_practise_user_firebase/widgets/app_bar/app_bar_back_button_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/common/local_image_wrapper_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/proxy/text/proxy_text_widget.dart';
+import 'package:flutter_practise_user_firebase/theme/theme_colors.dart';
+import 'package:flutter_practise_user_firebase/constants/styles.dart';
+import 'package:flutter_practise_user_firebase/constants/proxy.dart';
+import 'package:flutter_practise_user_firebase/constants/icons.dart';
+import 'package:flutter/material.dart';
 
 class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
   final String? title;
@@ -45,8 +45,8 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
                     color: ThemeColors.white,
                   )
                 : ProxyTextWidget(
-                    fontSize: ProxyFontSize.extraLarge,
-                    fontWeight: ProxyFontWeight.extraBold,
+                    fontSize: ProxyFontSize.large,
+                    fontWeight: ProxyFontWeight.bold,
                     textAlign: TextAlign.center,
                     text: title!,
                   ),

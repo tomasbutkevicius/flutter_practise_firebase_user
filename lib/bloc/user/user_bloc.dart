@@ -3,6 +3,7 @@ import 'package:equatable/equatable.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_practise_user_firebase/bloc/user/user_repository.dart';
+import 'package:flutter_practise_user_firebase/constants/messages.dart';
 import 'package:flutter_practise_user_firebase/models/form/form_login_model.dart';
 import 'package:flutter_practise_user_firebase/models/form/form_register_model.dart';
 import 'package:flutter_practise_user_firebase/models/request/request_status_model.dart';
@@ -15,6 +16,7 @@ part 'user_state.dart';
 
 class UserBloc extends Bloc<UserEvent, UserState> {
   final UserRepository repository;
+  StreamSubscription<User?>? _listener;
 
   UserBloc(this.repository) : super(const UserState()) {
     on<UserEventLogOut>(_mapEventLogOut);
@@ -23,9 +25,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
   }
 
   Future _mapEventLogOut(UserEventLogOut event, Emitter<UserState> emit) async {
-    emit(
-      const UserState(),
-    );
+    emit(const UserState());
   }
 
   Future _mapEventLogIn(UserEventLogIn event, Emitter<UserState> emit) async {
@@ -36,6 +36,9 @@ class UserBloc extends Bloc<UserEvent, UserState> {
     );
     try {
       UserModel user = await repository.login(event.formModel);
+
+      _handleListener();
+
       emit(
         state.copyWith(
           status: RequestStatus.done,
@@ -69,7 +72,7 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         state.copyWith(
           status: const RequestStatus(
             value: RequestStatusValue.done,
-            message: 'Register success',
+            message: MessagesConstants.registerSuccess,
           ),
         ),
       );
@@ -86,5 +89,22 @@ class UserBloc extends Bloc<UserEvent, UserState> {
         ),
       );
     }
+  }
+
+  Future _handleListener() async {
+    await _listener?.cancel();
+    _listener = repository.auth.authStateChanges().listen(
+      (User? firebaseUser) {
+        if (firebaseUser == null) {
+          add(UserEventLogOut());
+        }
+      },
+    );
+  }
+
+  @override
+  Future close() async {
+    await _listener?.cancel();
+    return super.close();
   }
 }

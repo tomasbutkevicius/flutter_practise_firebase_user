@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_practise_user_firebase/bloc/user/user_bloc.dart';
+import 'package:flutter_practise_user_firebase/widgets/common/loading_indicator_widget.dart';
 import 'package:flutter_practise_user_firebase/models/request/request_status_model.dart';
 import 'package:flutter_practise_user_firebase/widgets/common/error_icon_widget.dart';
-import 'package:flutter_practise_user_firebase/widgets/common/loading_indicator_widget.dart';
 import 'package:flutter_practise_user_firebase/widgets/user/user_widget.dart';
+import 'package:flutter_practise_user_firebase/bloc/user/user_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/material.dart';
 
 class UserWrapperWidget extends StatelessWidget {
   const UserWrapperWidget({Key? key}) : super(key: key);

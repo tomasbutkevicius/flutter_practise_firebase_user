@@ -1,7 +1,7 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_practise_user_firebase/bloc/navigation/navigation_bloc.dart';
 import 'package:flutter_practise_user_firebase/models/navigation/navigation_params_model.dart';
+import 'package:flutter_practise_user_firebase/bloc/navigation/navigation_bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/cupertino.dart';
 
 class NavigationUtilities {
   static void reset(BuildContext context) => context.read<NavigationBloc>().add(NavigationEventReset());
