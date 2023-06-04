@@ -8,11 +8,6 @@ class LoginSocialMediaButtonsWidget extends StatelessWidget {
   const LoginSocialMediaButtonsWidget({Key? key}) : super(key: key);
 
   void _onPressed(BuildContext context) {
-    ScaffoldMessenger.of(context).showSnackBar(
-      const SnackBar(
-        content: Text('Sorry, not implemented :(, you\'ll need to wait a bit ;)'),
-      ),
-    );
   }
 
   @override
